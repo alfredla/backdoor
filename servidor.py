@@ -44,7 +44,7 @@ def upserver():
 
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    server.bind(("192.168.1.96", 7777))
+    server.bind(("192.168.1.55", 7777))
     server.listen(1)
 
     print("Running server.....")
